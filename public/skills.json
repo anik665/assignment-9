@@ -1,0 +1,122 @@
+[
+  {
+    "skillId": 1,
+    "skillName": "Beginner Guitar Lessons",
+    "providerName": "Alex Martin",
+    "providerEmail": "alex@skillswap.com",
+    "price": 20,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "This beginner-friendly acoustic guitar course is designed for students with little to no prior experience. You will learn basic chords, simple strumming patterns, finger placement techniques, and how to play popular songs step by step. The lessons focus on building strong fundamentals while keeping the sessions fun, engaging, and easy to follow.",
+    "image": "https://i.ibb.co.com/DDwtnfqW/download.jpg",
+    "category": "Music"
+  },
+  {
+    "skillId": 2,
+    "skillName": "Spoken English Practice",
+    "providerName": "Sara Hossain",
+    "providerEmail": "sara@skillswap.com",
+    "price": 10,
+    "rating": 4.6,
+    "slotsAvailable": 5,
+    "description": "These spoken English practice sessions are ideal for non-native speakers who want to improve fluency, pronunciation, and confidence. The classes include real-life conversations, role-playing activities, and vocabulary-building exercises that help learners speak naturally in professional and social situations.",
+    "image": "https://i.ibb.co.com/Jw2Jz2N1/spocan.jpg",
+    "category": "Language"
+  },
+  {
+    "skillId": 3,
+    "skillName": "Web Development with JavaScript",
+    "providerName": "John Peterson",
+    "providerEmail": "john@skillswap.com",
+    "price": 30,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "This comprehensive web development course focuses on modern JavaScript concepts, including variables, functions, DOM manipulation, and basic APIs. Students will build small real-world projects and gain hands-on experience that prepares them for frontend development using popular frameworks.",
+    "image": "https://i.ibb.co.com/xtwJthPd/web.jpg",
+    "category": "Technology"
+  },
+  {
+    "skillId": 4,
+    "skillName": "Digital Marketing Basics",
+    "providerName": "Emily Roberts",
+    "providerEmail": "emily@skillswap.com",
+    "price": 25,
+    "rating": 4.7,
+    "slotsAvailable": 6,
+    "description": "Learn the fundamentals of digital marketing, including social media marketing, email campaigns, SEO basics, and content strategy. This course is perfect for beginners who want to promote businesses or personal brands effectively in the online world.",
+    "image": "https://i.ibb.co.com/WC9gC5Y/degital.jpg",
+    "category": "Marketing"
+  },
+  {
+    "skillId": 5,
+    "skillName": "Graphic Design with Canva",
+    "providerName": "Nabila Rahman",
+    "providerEmail": "nabila@skillswap.com",
+    "price": 15,
+    "rating": 4.5,
+    "slotsAvailable": 8,
+    "description": "This practical graphic design course teaches you how to create eye-catching posters, social media posts, and presentations using Canva. You will learn layout design, color theory, font pairing, and branding principles without needing prior design experience.",
+    "image": "https://i.ibb.co.com/Y7b2mCb7/grafig.jpg",
+    "category": "Design"
+  },
+  {
+    "skillId": 6,
+    "skillName": "Basic Photography Techniques",
+    "providerName": "Michael Lee",
+    "providerEmail": "michael@skillswap.com",
+    "price": 18,
+    "rating": 4.6,
+    "slotsAvailable": 5,
+    "description": "This photography course covers essential camera settings such as ISO, aperture, and shutter speed. Students will learn how to frame shots, work with natural lighting, and capture professional-quality photos using both DSLR cameras and smartphones.",
+    "image": "https://i.ibb.co.com/0j2T93XF/photography.jpg",
+    "category": "Photography"
+  },
+  {
+    "skillId": 7,
+    "skillName": "Public Speaking Confidence",
+    "providerName": "David Wilson",
+    "providerEmail": "david@skillswap.com",
+    "price": 22,
+    "rating": 4.8,
+    "slotsAvailable": 4,
+    "description": "This course is designed to help you overcome stage fear and speak confidently in front of an audience. You will practice speech structure, voice control, body language, and storytelling techniques that are essential for presentations, meetings, and public events.",
+    "image": "https://i.ibb.co.com/tpGvSJkX/speak.jpg",
+    "category": "Communication"
+  },
+  {
+    "skillId": 8,
+    "skillName": "Yoga for Beginners",
+    "providerName": "Ananya Sen",
+    "providerEmail": "ananya@skillswap.com",
+    "price": 12,
+    "rating": 4.7,
+    "slotsAvailable": 10,
+    "description": "This beginner yoga program focuses on basic postures, breathing techniques, and relaxation exercises. The sessions help improve flexibility, reduce stress, and build overall physical and mental well-being in a calm and supportive environment.",
+    "image": "https://i.ibb.co.com/60zqfXQT/yoga.jpg",
+    "category": "Health"
+  },
+  {
+    "skillId": 9,
+    "skillName": "Basic Cooking Skills",
+    "providerName": "Rahul Das",
+    "providerEmail": "rahul@skillswap.com",
+    "price": 14,
+    "rating": 4.6,
+    "slotsAvailable": 6,
+    "description": "Learn essential cooking techniques such as chopping, seasoning, and meal planning. This course focuses on preparing simple, healthy, and delicious meals at home, making it perfect for students, beginners, and busy professionals.",
+    "image": "https://i.ibb.co.com/QF9t7xXq/cooking.jpg",
+    "category": "Cooking"
+  },
+  {
+    "skillId": 10,
+    "skillName": "Excel for Office Work",
+    "providerName": "Tanvir Ahmed",
+    "providerEmail": "tanvir@skillswap.com",
+    "price": 20,
+    "rating": 4.9,
+    "slotsAvailable": 5,
+    "description": "This Excel training course teaches essential spreadsheet skills, including formulas, data formatting, charts, and basic data analysis. It is ideal for office workers and students who want to improve productivity and manage data efficiently.",
+    "image": "https://i.ibb.co.com/Y4pbjG2t/productivy.jpg",
+    "category": "Productivity"
+  }
+]
