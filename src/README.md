@@ -48,3 +48,62 @@ src/
 ├── App.jsx
 └── main.jsx
 ```
+
+import React, { createContext, useEffect, useState } from "react";
+import {
+getAuth,
+createUserWithEmailAndPassword,
+signInWithEmailAndPassword,
+onAuthStateChanged,
+signOut,
+updateProfile,
+} from "firebase/auth";
+import app from "../firebase.init";
+
+export const AuthContex = createContext();
+const auth = getAuth(app);
+
+const AuthProvider = ({ children }) => {
+const [user, setUser] = useState(null);
+console.log(user);
+
+const [loading, setLoading] = useState(true);
+// console.log(loading);
+
+useEffect(() => {
+const unsubCribe = onAuthStateChanged(auth, (currentUser) => {
+setUser(currentUser);
+setLoading(false);
+});
+return () => {
+unsubCribe();
+};
+}, []);
+
+const CreateUser = (email, password) => {
+return createUserWithEmailAndPassword(auth, email, password);
+};
+const SignInUser = (email, password) => {
+return signInWithEmailAndPassword(auth, email, password);
+};
+const UpdateUser = (upGradedata) => {
+return updateProfile(auth.currentUser, upGradedata);
+};
+const SignOutUser = () => {
+return signOut(auth);
+};
+
+const authValue = {
+user,
+setUser,
+CreateUser,
+SignInUser,
+SignOutUser,
+loading,
+setLoading,
+UpdateUser,
+};
+return <AuthContex value={authValue}> {children} </AuthContex>;
+};
+
+export default AuthProvider;

@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router";
 import { motion } from "framer-motion";
+import { AuthContex } from "../../../Provider/AuthProvider";
 
 const Navbar = () => {
+  const { user, LogOut, loading } = useContext(AuthContex);
+
+  if (loading) return null;
+
   const linkClass = ({ isActive }) =>
     isActive ? "text-primary font-semibold" : "hover:text-primary transition";
 
@@ -31,20 +36,15 @@ const Navbar = () => {
       <div className="navbar bg-base-100 shadow-md px-4 lg:px-10">
         {/* LEFT */}
         <div className="navbar-start">
-          {/* Mobile menu */}
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               ☰
             </label>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 w-52 rounded-box bg-base-100 shadow"
-            >
+            <ul className="menu menu-sm dropdown-content mt-3 w-52 rounded-box bg-base-100 shadow">
               {Links}
             </ul>
           </div>
 
-          {/* Logo */}
           <NavLink to="/" className="text-2xl font-bold text-primary">
             Skill<span className="text-secondary">Swap</span>
           </NavLink>
@@ -57,15 +57,27 @@ const Navbar = () => {
 
         {/* RIGHT */}
         <div className="navbar-end gap-3">
-          <NavLink to="/login" className="btn btn-outline btn-primary">
-            Login
-          </NavLink>
-
-          <motion.div whileHover={{ scale: 1.05 }}>
-            <NavLink to="/register" className="btn btn-primary text-white">
-              Sign Up
-            </NavLink>
-          </motion.div>
+          {user ? (
+            <>
+              <span className="text-sm font-medium">
+                {user.displayName || user.email}
+              </span>
+              <button onClick={LogOut} className="btn btn-outline btn-primary">
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              <NavLink to="/login" className="btn btn-outline btn-primary">
+                Login
+              </NavLink>
+              <motion.div whileHover={{ scale: 1.05 }}>
+                <NavLink to="/register" className="btn btn-primary text-white">
+                  Sign Up
+                </NavLink>
+              </motion.div>
+            </>
+          )}
         </div>
       </div>
     </motion.div>
