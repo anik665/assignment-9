@@ -3,6 +3,8 @@ import MarqueeSection from "../../Component/Marque/Marue";
 import { AuthContex } from "../../Provider/AuthProvider";
 import { useLoaderData } from "react-router";
 import CatagorisCarad from "../../Component/catagories/CatagorisCarad";
+import HowitsWord from "../../Component/HowItsWork/HowItsWord";
+import TopRatedProviders from "../../Component/TopRatedProvider/TopRatedProvider";
 
 const Home = () => {
   const data = useLoaderData();
@@ -18,6 +20,8 @@ const Home = () => {
           return <CatagorisCarad key={data.skillId} data={data} />;
         })}
       </div>
+      <HowitsWord></HowitsWord>
+      <TopRatedProviders></TopRatedProviders>
     </div>
   );
 };

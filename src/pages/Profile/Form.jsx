@@ -11,7 +11,7 @@ const Form = () => {
     const email = e.target.email.value;
     const name = e.target.name.value;
     const photoUrl = e.target.PhotoUrl.value;
-    console.log(email, name, photoUrl);
+    // console.log(email, name, photoUrl);
     updateUser(name, photoUrl)
       .then(() => {
         toast("Your SuccessFully Update Your Profile");

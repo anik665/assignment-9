@@ -20,7 +20,7 @@ const AuthProvider = ({ children }) => {
   const [user, setuser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  console.log(user);
+  // console.log(user);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {

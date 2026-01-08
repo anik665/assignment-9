@@ -20,14 +20,11 @@ const Catagories = () => {
   // console.log(filterData);
   return (
     <div className="mt-10">
-      {/* <h1>This is catagory section {id}</h1> */}
-      <div className="grid grid-cols-3 gap-4">
-        {" "}
-        {data.map((data) => {
-          return <CatagorisCarad data={data} />;
-        })}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {data.map((item) => (
+          <CatagorisCarad key={item.skillId} data={item} />
+        ))}
       </div>
-      {/* <CatagorisCarad></CatagorisCarad> */}
     </div>
   );
 };
