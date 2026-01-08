@@ -106,17 +106,5 @@
     "description": "Learn essential cooking techniques such as chopping, seasoning, and meal planning. This course focuses on preparing simple, healthy, and delicious meals at home, making it perfect for students, beginners, and busy professionals.",
     "image": "https://i.ibb.co.com/QF9t7xXq/cooking.jpg",
     "category": "Cooking"
-  },
-  {
-    "skillId": 10,
-    "skillName": "Excel for Office Work",
-    "providerName": "Tanvir Ahmed",
-    "providerEmail": "tanvir@skillswap.com",
-    "price": 20,
-    "rating": 4.9,
-    "slotsAvailable": 5,
-    "description": "This Excel training course teaches essential spreadsheet skills, including formulas, data formatting, charts, and basic data analysis. It is ideal for office workers and students who want to improve productivity and manage data efficiently.",
-    "image": "https://i.ibb.co.com/Y4pbjG2t/productivy.jpg",
-    "category": "Productivity"
   }
 ]

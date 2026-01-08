@@ -6,7 +6,6 @@ import { FaUser } from "react-icons/fa";
 
 const Navbar = () => {
   const { user, LogOut, loading, signOutUser } = useContext(AuthContex);
-  console.log("PHOTO URL:", user?.photoURL);
 
   if (loading) return null;
   const signOut = () => {
