@@ -6,21 +6,18 @@ const Catagories = () => {
   const [data, setData] = useState([]);
   const { id } = useParams();
   const datas = useLoaderData();
+
   useEffect(() => {
     if (id === "all") {
       setData(datas);
-      return;
     } else {
-      const filterData = datas.filter((el) => el.skillId == id);
-      setData(filterData);
-      return;
+      setData(datas.filter((el) => el.skillId == id));
     }
   }, [datas, id]);
 
-  // console.log(filterData);
   return (
-    <div className="mt-10">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div className="mt-10 px-2">
+      <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
         {data.map((item) => (
           <CatagorisCarad key={item.skillId} data={item} />
         ))}

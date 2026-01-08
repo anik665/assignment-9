@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 const CatagorisCarad = ({ data }) => {
   return (
-    <div className="card bg-base-100 w-80 shadow-md hover:shadow-xl transition-all duration-300 rounded-xl">
+    <div className="card bg-base-100 w-full shadow-sm hover:shadow-xl transition-all duration-300 rounded-xl">
       {/* Image */}
       <figure className="h-48 overflow-hidden rounded-t-xl">
         <img
