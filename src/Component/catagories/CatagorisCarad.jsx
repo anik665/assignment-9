@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 const CatagorisCarad = ({ data }) => {
   return (
@@ -28,9 +29,12 @@ const CatagorisCarad = ({ data }) => {
 
         {/* Button */}
         <div className="card-actions mt-4">
-          <button className="btn btn-primary w-full rounded-lg">
+          <Link
+            to={`viewDetails/${data.skillId}`}
+            className="btn btn-primary w-full rounded-lg"
+          >
             View Details
-          </button>
+          </Link>
         </div>
       </div>
     </div>

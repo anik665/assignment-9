@@ -2,11 +2,20 @@ import React, { useContext } from "react";
 import { NavLink } from "react-router";
 import { motion } from "framer-motion";
 import { AuthContex } from "../../../Provider/AuthProvider";
+import { FaUser } from "react-icons/fa";
 
 const Navbar = () => {
-  const { user, LogOut, loading } = useContext(AuthContex);
+  const { user, LogOut, loading, signOutUser } = useContext(AuthContex);
+  console.log("PHOTO URL:", user?.photoURL);
 
   if (loading) return null;
+  const signOut = () => {
+    signOutUser()
+      .then()
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   const linkClass = ({ isActive }) =>
     isActive ? "text-primary font-semibold" : "hover:text-primary transition";
@@ -59,10 +68,31 @@ const Navbar = () => {
         <div className="navbar-end gap-3">
           {user ? (
             <>
-              <span className="text-sm font-medium">
+              <div
+                className="tooltip tooltip-bottom"
+                data-tip={user.displayName || user.email}
+              >
+                {user.photoURL ? (
+                  <div className="avatar cursor-pointer">
+                    <div className="w-10 rounded-full">
+                      <img
+                        src={user.photoURL}
+                        alt="User"
+                        referrerPolicy="no-referrer"
+                      />
+                    </div>
+                  </div>
+                ) : (
+                  <div className="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center cursor-pointer">
+                    <FaUser className="text-gray-600" />
+                  </div>
+                )}
+              </div>
+
+              {/* <span className="text-sm font-medium">
                 {user.displayName || user.email}
-              </span>
-              <button onClick={LogOut} className="btn btn-outline btn-primary">
+              </span> */}
+              <button onClick={signOut} className="btn btn-outline btn-primary">
                 Logout
               </button>
             </>
